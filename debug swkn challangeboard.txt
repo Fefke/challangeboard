@@ -1,0 +1,63 @@
+
+	###################################################################################################
+	###############################█████##█#####█##█##█#########▓###▓##################################
+	###############################█######█#####█##█#█##########▓▓##▓##################################
+	###############################█████##█#███#█##██####█████##▓#▓#▓##################################
+	###################################█##███#███##█#█##########▓##▓▓##################################
+	###############################█████##██###██##█##█#########▓###▓##################################
+	###################################################################################################
+	################################ C H A L L E N G E - B O A R D ####################################
+	###################################################################################################
+	####################################### D E B U G I N G ###########################################
+	###################################################################################################
+
+
+	P - Probleme
+
+
+- Usermanagement
+	- Logout nach Gruppenwechsel! -> wegen Laufzeiterrors
+	
+	- Nur eine Anmeldung pro Person erlauben (Anmeldung verweigern -> mit eigener Meldung)
+
+- Punktesystem
+	- Einlösen mit folgendem Eintrag in "winner" Tabelle
+	- Auswahl von Gewinn
+	- 
+	- 
+	- 
+	
+	
+- Challangeboard
+	- Archivieren von Aufgaben
+		P - Undefinierte offsets bei volligem archivieren
+	- Systemid's müssen bei völligem entleeren aus dem Archiv ausgelesen werden -> Max + 1 = New ID
+	- Bei völligem entleeren muss für admin bei jedem Start eine neue Zeile mit der obigen ID angegeben werden (Gegen Bugs in DB)
+	- Controller line 170 Offset Errors beim Speichern von komplizierteren oder Clientseitig erzeugten Einträgen
+	
+	- *Backup Tabelle mit allen jemals getätigten Einträgen
+	
+	
+	
+- Settings
+	- Bestätigunsanzeige blendet nicht mehr aus
+	
+	
+- Admin Tools
+	- Usermanagement funktioniert nicht zuverlässig!
+
+
+	
+Security - Highest LEVEL
+
+( i ) Pepper statt Salt: Individueller Salt für jeden Benutzer
+( i ) SHA-512: NSA Hashing Funktion
+( i ) Chaoseffekt: Unübersichtlichkeit im Code... zur Sicherheit!
+
+
+
+- Doppel-Hashing: 2 Dimensionaler Aufbau eines Arrays
+	- Unwahrscheinlichkeit des Errechnens des Passworts wird quadriert... also um die vorherige Länge mit sich selbst multipliziert länger
+- Dreifach-Hashing: 3 Dimensionaler Aufbau eines Arrays
+	- Unwahrscheinlichkeit des Errechnens des Passworts wird kubiert (Kubieren -> mit Exponentem: 3)... also die vorherige Länge mit sich selbst multipliziert und diese wird erneut mit sich selbst multipliziert.
+		-So entsteht ein dreidimensionales Cluster an Möglichen Passwörtern, bei einem 512-Bit langem Hash wären das schlussendlich 68.719.476.736 mögliche Passwörter

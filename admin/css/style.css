@@ -1,0 +1,471 @@
+/*IMPORTS*/
+@font-face {
+    font-family: Skranji;
+    src: url(../../includes/style/fonts/Skranji-Regular.ttf);
+    font-weight: bold;
+}
+
+
+
+/*Allgemeine Einstellungen*/
+* {
+	font-family: Verdana;
+}
+
+body {
+    background: #ffc3b0;
+	max-width: 100% !important;
+	/*BG Animations*/
+	background: linear-gradient(270deg, #ff8686, #ffffd9, #49ceb3, #52cced);
+	background-size: 800% 800%;
+	-webkit-animation: bganimate 40s ease infinite;
+	-moz-animation: bganimate 40s ease infinite;
+	-o-animation: bganimate 40s ease infinite;
+	animation: bganimate 40s ease infinite;
+	
+}
+
+
+h1 {
+	color: #285596;
+	text-align: center;
+
+	color: #fff;
+	text-shadow: 0px 1px 0px #888, 0px 2px 0px #777, 0px 3px 0px #666, 0px 4px 0px #555, 0px 5px 0px #444, 0px 6px 0px #333, 0px 7px 0px #222, 0px 8px 7px #001135;
+	font: 2.5em 'Skranji';
+
+}
+
+details {
+	background-color: rgba(0,150,250,0.2);
+	padding: 10px;
+	border: none;
+}
+
+summary {
+	border: none;
+}
+
+
+
+/*Form Design*/
+
+input, select {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select {
+    min-width: 65px;
+}
+
+input[type=text].imptext {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+
+input[type=number] {
+	border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit], #redirect {
+    width: 100%;
+    background-color: #2CAFB0;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=password]:not(#password):not(.valid):not(.error) {
+    background-color: #444444;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+	background-image: url('../../img/password/normal.png');
+    background-position: 5px 7px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+
+/*Check Password validation*/
+input[type=password].valid {
+	background-color: #444444;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+	background-image: url("../../img/password/safe.png");
+	background-position: 5px 7px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+
+input[type=password].error {
+	background-color: #444444;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+	background-image: url("../../img/password/unsafe.png");
+	background-position: 5px 7px; 
+    background-repeat: no-repeat;
+    padding-left: 40px;
+}
+
+
+input[type=submit]:hover, #redirect:hover {
+    background-color: #0C8F90;
+}
+
+input[type=checkbox] {
+	min-width: 12.5px;
+}
+
+/*Design für Footer*/
+
+button.extra:not(disabled) {
+	background-color: #1e91c8;
+	padding: 10px;
+	border: none;
+	color: white;
+	border-radius: 45px;
+}
+
+
+
+
+/*Geräte spezifisches Design*/
+
+/*Standard*/
+@media (min-width: 768px) {
+
+h1 {
+	padding-left: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.main {
+	box-shadow: 5px 15px 50px 5px #222222;
+	width: 80%;
+	min-width: 300px;
+	background-color: #efefef;
+	padding: 25px 10px 10px;
+	margin: 150px auto 100px;
+}
+
+.head {
+	list-style-type: none;
+	text-decoration: none;
+	background-color: #dedede;
+	padding: 10px;
+}
+
+#login {
+	width: 160px;
+	box-shadow: 10px -22px 50px -5px rgba(0,0,0,0.16);
+	transform: translateY(-80px);
+	float: right;
+	height: 7em;
+	margin-right: 5%;
+	border-radius: 15px;
+	position: relative;
+
+	height: 100px;
+	min-height: 50px;
+	z-index: 99;
+
+}
+
+
+
+#punkteein {
+	padding: 15px; 
+	border-radius: 45px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#punkteein.enabled:hover {
+	background-color: rgba(0,250,0,0.5);
+	color: white;
+}
+
+#password, #username {
+	width: 155px;
+}
+
+
+/*Style für's Info Board**/
+.board {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.board td, .board th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.board tr {
+	background-color: #f2f2f2;
+}
+
+.board tr:hover {
+	background-color: #c8e4e9;
+}
+
+.board th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1e91c8;
+    color: white;
+}
+	/*style für jede spalte*/
+	.board .bes {width: 90%;}
+	.board .pkt {width: 50px;}
+	.board .name {width: 100px;}
+	
+/*Styles fürs Infoboard*/
+
+.legende_part {
+	width: 50px;
+}
+
+.legende_text {
+	max-width: 200px;
+}
+
+
+
+/*Extra for special Paragraphs*/
+
+.link_info {
+    color: rgba(0,0,0,0.4);
+    font-size: 8px;
+    margin: 0;
+    padding-top: 0;
+}
+
+/*Link Styles*/
+#allowed {
+    text-decoration: none;
+    background-color: #1e91c8;
+    color: white;
+    padding: 10px;
+    border-radius: 45px;
+    margin: 5px;
+}
+
+#allowed:hover {
+    color: black;
+    background-color: #dddddd;
+}
+
+
+
+/*INCLUDEs ANIMATIONs*/
+
+.main {
+  animation: fadedown ease 1s;
+  animation-fill-mode:forwards;
+  -webkit-animation: fadedown ease 1s;
+  -webkit-animation-fill-mode:forwards;
+}
+
+@keyframes fadedown {
+  0% {
+    opacity:0;
+    transform:  translate(0px,-25px)  ;
+  }
+  100% {
+    opacity:1;
+    transform:  translate(0px,0px)  ;
+  }
+}
+
+@-webkit-keyframes fadedown {
+  0% {opacity:0;-webkit-transform:  translate(0px,-25px)  ;}
+  100% { opacity:1;
+    -webkit-transform:  translate(0px,0px)  ;
+  }
+}
+
+}
+
+/*Mobile*/
+@media (max-width: 768px) {
+
+.main {
+	box-shadow: 2px 5px 5px 2px #dfdfdf;
+	width: 100% !important;
+	background-color: #efefef;
+	padding-top: 10px;
+	margin: 15px auto 100px;
+}
+
+.head {
+	position: relative;
+	background-color: #dedede;
+	padding: 10px;
+	z-index: 99;
+	list-style-type: none;
+	text-decoration: none; 
+	
+}
+
+#punkteein {
+	padding: 15px; 
+	border-radius: 45px;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#punkteein.enabled:hover {
+	background-color: rgba(0,250,0,0.5);
+	color: white;
+}
+
+#password, #username {
+	width: 155px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+/*Style für's Info Board**/
+
+.board {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+}
+
+.board td, .board th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.board tr {
+	background-color: #f2f2f2;
+}
+
+.board tr:hover {
+	background-color: #c8e4e9;
+}
+
+.board th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1e91c8;
+    color: white;
+}
+
+	/*style für jede spalte*/
+	.board .bes {width: 90%;}
+	.board .pkt {width: 50px;}
+	.board .name {width: 100px;}
+	
+
+/*Styles fürs Infoboard*/
+
+.legende_part {
+	width: 50px;
+}
+
+.legende_text {
+	max-width: 200px;
+}
+
+
+/*Optimization der Spalten*/
+
+.bes {
+	width: 50%;
+}
+
+.id, tr td:first-of-type {
+	display: none;
+}
+
+.name, tr td:nth-of-type(4) {
+	width: 50px!important;
+}
+
+.arch, tr td:nth-of-type(5) {
+	padding:0;
+	width: 5px!important;
+}
+
+
+/*Extra for special Paragraphs*/
+
+.link_info {
+    color: rgba(0,0,0,0.4);
+    font-size: 8px;
+    margin: 0;
+    padding-top: 0;
+}
+
+
+
+
+/*Link Styles*/
+#allowed {
+    text-decoration: none;
+    background-color: #1e91c8;
+    color: white;
+    padding: 10px;
+    border-radius: 45px;
+    margin: 5px;
+}
+
+#allowed:hover {
+    color: black;
+    background-color: #dddddd;
+}
+
+
+}
+
+
+
+
+/*ANIMATIONs*/
+
+@-webkit-keyframes bganimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes bganimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes bganimate { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+@-o-keyframes bganimate {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

@@ -1,0 +1,37 @@
+
+
+Tabelle erstellen
+CREATE TABLE IF NOT EXISTS challange_board (
+			id INT NOT NULL,
+    		beschreibung TEXT NOT NULL,
+			punkte INT,
+			name VARCHAR(255),
+			PRIMARY KEY (id),
+			UNIQUE KEY (beschreibung)
+);
+
+
+User Tabelle erstelen
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `group` varchar(50),
+  `punkte` int(250),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`)
+ );
+
+
+config Tabelle erstellen
+CREATE TABLE IF NOT EXISTS config ( 
+    id int,
+    legend text
+);
+
+Neue Werte einfügen
+INSERT INTO `challange_board`(`id`, `beschreibung`, `punkte`, `name`) VALUES (1,1,1,1)
+
+
+Neu Werte/erbesserungen einfügen
+UPDATE `challange_board` SET `beschreibung`= 1,`punkte`= 1,`name`= 1 WHERE id = 1

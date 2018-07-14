@@ -1,0 +1,41 @@
+# Define some error documents
+ErrorDocument 401 "Access Forbidden"
+ErrorDocument 403 /error_document?code=403
+ErrorDocument 404 /error_document?code=404
+ErrorDocument 410 /error_document?code=410
+ErrorDocument 500 "Internal Server Error"
+
+# Deny showing indexes for directory content - Uncomment if supported by you web host
+#Options -Indexes
+
+# URL-rewriting
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+
+  # Tell PHP that the mod_rewrite module is enabled
+  <IfModule mod_env.c>
+    SetEnv HTTP_MOD_REWRITE On
+  </IfModule>
+  
+  # Web path to catalog root
+  RewriteBase /
+
+  # No rewrite logic for physical files
+  RewriteCond %{REQUEST_FILENAME} -d [OR]
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -l
+  RewriteRule ^ - [L]
+
+  RewriteRule ^.*$ index.php?%{QUERY_STRING} [L]
+</IfModule>
+
+# Deny access to content
+<FilesMatch "\.(htaccess|htpasswd|inc\.php)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order Deny,Allow
+    Deny from all
+  </IfModule>
+</FilesMatch>

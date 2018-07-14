@@ -1,0 +1,5 @@
+<?php
+
+//swkn_password
+
+?>
