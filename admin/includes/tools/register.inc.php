@@ -34,7 +34,7 @@ if (isset($_POST['registernewuser'])){
 	
 	
 	############## User-ID erstellen ##############
-	$sql = mysqli_query((new database)->con(),"SELECT MAX(id) FROM `users`"); 
+	$sql = database::query("SELECT MAX(id) FROM `users`"); 
 	$id = mysqli_fetch_array($sql, MYSQLI_ASSOC);
 	$user_id = $id['MAX(id)'] + 1;
 
@@ -42,7 +42,7 @@ if (isset($_POST['registernewuser'])){
 	
 	######### Datenbank eintrag erstellen #########
         $query = "INSERT INTO `users`(`id`, `username`, `password`, `group`) VALUES ('" . $user_id . "','" . $username . "', '" . $password . "', '" . $group . "')";
-        $result = mysqli_query((new database)->con(),$query);
+        $result = database::query($query);
         if($result){
 			$_SESSION['details'] = "open";
             echo "<h3 style='color: green;'>" . $username . " wurde erfolgreich registriert.</h3>";

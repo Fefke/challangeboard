@@ -1,34 +1,33 @@
 
 
 function addRow() {
-	var highest_id = $('#board tr').length;
-	var sys_id = $( '.boardids' ).last().val();
+	var jqadded, bodyl, sys_id;
+	jqadded = $('.jqadded').length;
+	bodyl = $('#board tr').length;
+	sys_id = $( '.boardids' ).last().val();
 	sys_id = parseInt(sys_id) + 1;
-	$('.board tr:last').after('<tr class="jqadded"><td><input class="boardids" type="hidden" name="id[]" value="' + sys_id + '"/>' + highest_id + '</td><td><input class="bes" type="text" name="bes[]"/></td><td><input class="pkt" type="number" min="0" name="pkt[]" /></td><td><input class="name" type="text" name="name[]" /></td></tr>');
+	$('.board tr:last').after('<tr class="jqadded"><td><input class="boardids" type="hidden" name="id[]" value="' + sys_id + '"/>' + bodyl + '</td><td><input class="bes" type="text" name="bes[]"/></td><td><input class="pkt" type="number" min="0" name="pkt[]" /></td><td><input class="name" type="text" name="name[]" /></td></tr>');
+	$('html, body').animate({scrollTop: $(document).height()}, 0 );
 	
-	$("html, body").animate({ scrollTop: $(document).height() }, 100);
-	console.log("Reihe: " + highest_id + " hinzugefügt | Sys:" + sys_id);
+	$( "#delete" ).prop( "disabled", false );//Löschbutton freischalten -> da jetzt ja min. 1 Element da sein muss
 	
-	if (highest_id >= 3) {
-		$( "#delete" ).prop( "disabled", false );
-	}
+	//Console Log
+	console.log("Reihe: " + bodyl + " hinzugefügt | Sys:" + sys_id);
 }
 
 
 
 function deleterow() {
-	var highest_id = $('#board tr').length;
-	var jqaddedquests = $('.jqadded').length;
-	
-	var higest_fix_id = highest_id - jqaddedquests;
-	//Entfernen der Reihe
+	var jqadded = $('.jqadded').length;
 	$('.jqadded:last').remove();
-	
-	//higest_fix_id = higest_fix_id - 1;
-	if (jqaddedquests <= 1) {
-		$( '#delete' ).prop("disabled", true);
+	if (jqadded <= 1) {
+		$( "#delete" ).prop( "disabled", true );
 	}
-
+	//Console Log
+	bodyl = $('#board tr').length;
+	sys_id = $( '.boardids' ).last().val();
+	sys_id = parseInt(sys_id) + 1;
+	console.log("Reihe: " + bodyl + " gelöscht | Sys:" + sys_id);
 }
 
 

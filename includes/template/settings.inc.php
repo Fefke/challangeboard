@@ -8,7 +8,7 @@ if (isset($_POST["passwd_safe"])) {
 		//Pa.sswort mit SWK-Salt vershlüsseln
 		$password = crypt($password, '$6$rounds=7000$stadtwerke_security$');
 		$query = "UPDATE `users` SET `password`= '" . $password . "' WHERE `username` = '" . $_SESSION['username'] . "';";
-        $result = mysqli_query((new database)->con(),$query);
+        $result = database::query($query);
 
 		if($result){
             echo "<h3 style='color: green;'>Passwort wurde erfolgreich geändert.</h3>";

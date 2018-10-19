@@ -23,7 +23,7 @@ if ($_SESSION['group'] == "admin" && isset($_POST['safe_user_changes']) && $_POS
 		//SQL Query
 		if ($row = $uid[$index]) {
 			$sqlui = 'UPDATE `users` SET `username` = "' . $uusername[$index] . '", `group` = "' . $ugroup[$index] . '", `punkte` = "' . $upkt[$index] . '" WHERE id = ' .$uid[$index] . ';';
-			$updaten = mysqli_query( (new database)->con(), $sqlui );
+			$updaten = database::query($sqlui);
 		}
 	}
     
@@ -38,7 +38,7 @@ if ($_SESSION['group'] == "admin" && isset($_POST['safe_user_changes']) && $_POS
         foreach($resetpasswd as $row) {
     		//SQL Query
     		$sql = 'UPDATE `users` SET `password`= "' . $password . '"  WHERE `username` = "' . $row . '" ;';
-    		$updaten = mysqli_query( (new database)->con(), $sql );
+    		$updaten = database::query($sql);
     	}
     
     }
@@ -62,8 +62,8 @@ if ($_SESSION['group'] == "admin" && isset($_POST['safe_user_changes']) && $_POS
 	
 	//Abfrage ob eigene Gruppe geändert
 	$sql="SELECT * FROM users WHERE username='" . $_SESSION['username'] . "';";
-	$sql=mysqli_query((new database)->con(),$sql);
-	$user=mysqli_fetch_array($sql,MYSQLI_ASSOC);	
+	$sql = database::query($sql);
+	$user = mysqli_fetch_array($sql,MYSQLI_ASSOC);	
 		
 	if ($user['group'] != "admin") {
 		echo "<script type='text/javascript'>location.reload();</script>";
@@ -77,7 +77,7 @@ if ($_SESSION['group'] == "admin" && isset($_POST['safe_user_changes']) && $_POS
 #################### Change User ####################
 
     $sqlu = "SELECT `id`, `username`, `group`, `punkte` FROM `users`";
-    $query = mysqli_query( (new database)->con(), $sqlu );
+    $query = database::query($sqlu);
     
     ################### Ausgabe ###################
 
