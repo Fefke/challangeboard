@@ -12,32 +12,20 @@
 	###################################################################################################
 	
 	Author: Felix B. - Stadtwerke Karlsruhe
-	Version: 1.0
+	Version: 1.0 (Open Beta)
+	
+	Known Bugs:
 	
 	
-	###################################################################################################
-	#                                         E N G L I S H                                           #
-	###################################################################################################	
 	
-	- Coming Soon -
-	
-	###################################################################################################
-	#                                         D E U T S C H                                           #
-	###################################################################################################
-	
-	#      EINFÜHRUNG      #
-	
-	Mit dem SWK-N Challangeboard möchten wir der breiten Öffentlichkeit die Möglichkit geben sich vor allem
+##      EINFÜHRUNG
+  Mit dem SWK-N Challangeboard möchten unseren Azubis die Möglichkit geben sich vor allem
   bei Kleinigkeiten besser zu organisieren.
   Belohnen deine Kollegen mithilfe eines Punktesystems und geben Sie Ihnen die Möglichkeit sich selbst für
-  Aufgaben einzutragen... oder gib es Ihnen vor, behalte als Inhaber die volle Macht über alles was passiert,
-  
-  KEINE versteckten Kosten und viel Sicherheit, dank Backup-, Archivierungs- und Verschlüsselungslösungen.
-	
-	Probier es einfach einmal aus...
-	
-	#     INSTALLATION     #
-	
+  Aufgaben einzutragen... oder gib es Ihnen vor, behalte als Inhaber die volle Macht über alles was passiert.
+
+
+##     INSTALLATION     	
 	1. Gehe zu "includes/config.inc.php" und öffne die Datei mit einem Editor.
 	2. Fülle die Zugangsdaten deiner Datenbank in die dafür vorgesehenen Felder.
 	3. Nach dem Speichern sollte (falls noch nicht geschehen) der Webserver gestartet werden.
@@ -51,31 +39,30 @@
 	
 	
 	
-	#       FUNKTIONEN       #
+##       FUNKTIONEN       
 
-- Easy2Develop        => Multiparadigmisch mit Prozedurale und Objektorientierter Programmierung
-                         So möchte ich das Weiterentwickeln so leicht wie möglich gestalten.
-                         Die Dateinamen sind natürlich der Funktion entsprechend zugeordnet, sowie klassen
-                         mit Ihren Funktionen und Methoden (Database/Controller).
+- Easy2Develop        => Ein multiparadigmischer Syntax mit **modularer** und **objektorientierter** Programmierung 
+				> So möchte ich das Weiterentwickeln so leicht wie möglich gestalten.
+				> Die Dateinamen sind natürlich der Funktion entsprechend zugeordnet, gleich bei Klassen
+				> und Methoden (Database/Controller).
 
-- Easy2Install        => Einfache Installation, dank Installatinsassistent/ automatischer Installation
-- Usermanagement      => Verteile Rechte, Ändern Sie namen oder reseten Sie als Admin Passwörter
+- Easy2Install        => Einfache Installation, dank *Installatinsassistent*
+				> Diese Funktion ist vor allem für den schnellen Einstieg in die Entwicklung gedacht,
+				> quasie *on the run* anfangen und herumspielen. 
+- Usermanagement      => Funktional Benutzer Gruppen zuweisen, Namen ändern oder Passwörter reseten
 - Contenmanagement    => Schreibe deinen Eigenen Inhalt, wie es dir gefällt... nichts hält dich auf!
-- Login-Bereiche      => Chef und Angestellte! Spaß :D, aber einer muss die Überhand haben :/
+- Login-Bereiche      => In Zukunft soll dieser Bereich noch gesonderter wie aktuell gehandhabt werden.
 - Info Bereich        => Ich möchte allen darüber bescheid geben, was und wie mit Ihren Daten umgegangen wird.
 - Enstellungen        => Nutzer können (egal welcher Gruppe angehörig) als einzige Ihre Passwörter an sich ändern. 
 - Beauty              => Aktuell benutze ich CSS Animationen, um den Hintergrund aller Seiten etwas ansprechender zu gestalten
-                         Im Falle können über das strukturierte Dateisystem und die übersichtliche Schreibweise immernoch Änderungen
-                         vorgenommen werden.
-                          => Mir persönlich gefällt der animierte Hintergrund, ist nicht so aufdringlich und dennoch schön anzusehen...
+                         	> Im Falle können über das strukturierte Dateisystem und die übersichtliche Schreibweise 					> immernoch Änderungen vorgenommen werden.
+                          	> => Mir persönlich gefällt der animierte Hintergrund, ist nicht so aufdringlich und dennoch 					> schön anzusehen...
 
 	
-	#     SCHLUSSWORT      #
-	
-  => Feedback und Verbesserungsvorschläge bitte an "frag.mich.hier@gmail.com"
-	
-	
-	
+##     SCHLUSSWORT 
+Wer Lust hat aktiv zu entwickeln oder das Projekt übernehmen oder einfach nur etwas zu diesem Thema wissen möchte, kann sich  gerne auch persönlich melden. 
+
+  => Feedback und Verbesserungsvorschläge über GitHub oder an "frag.mich.hier@gmail.com"
 	
 	
 	
@@ -83,4 +70,4 @@
 	
 	
 	Erstelldatum: 07.06.2018
-  Änderungsdatum: 14.07.2018 - Felix B.
+  Änderungsdatum: 19.10.2018 - Felix B.
