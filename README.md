@@ -15,8 +15,21 @@
 	Version: 1.0 (Open Beta)
 	
 	Known Bugs:
-	
-	
+	 - Weiterleiten (aktuell über JS)
+	 - Neue Einträge nach freien Zeilen werden nicht übernommen
+	 - Punktesystem ausreifen (**ESSENTIELL**)
+	 
+	 
+	ToDo:
+	 - Bug fixes (sowieso immer)
+	 - Mobile Design finalisieren
+	 - Admin Bereich serverseitig mit .htaccess / .htpasswd absichern
+	 - SuperAdmin || Admins zu Mod's einfügen (ein Admin dem die Rechte nicht genommen werden können)
+	 - management der Backup-Tabelle fertigstellen
+	 - Informationsfeld einfügen (bzw. zum Laufen bringen)
+	 - Lest im Challenge-Board, dafür ist es ja da... ☺
+	 
+	 
 	
 ##      EINFÜHRUNG
   Mit dem SWK-N Challangeboard möchten unseren Azubis die Möglichkit geben sich vor allem
