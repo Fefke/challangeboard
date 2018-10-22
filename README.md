@@ -15,8 +15,10 @@
 	Version: 1.0 (Open Beta)
 	
 	Known Bugs:
+	 - Erstellen neuer Einträge nicht möglich (**ESSENTIELL**)
 	 - Weiterleiten (aktuell über JS)
 	 - Neue Einträge nach freien Zeilen werden nicht übernommen
+	 - Punktzuweisung pro Benutzer fehlerhaft (**ESSENTIELL**)
 	 - Punktesystem ausreifen (**ESSENTIELL**)
 	 
 	 
@@ -30,7 +32,10 @@
 	 - Lest im Challenge-Board, dafür ist es ja da... ☺
 	 
 	 
-	
+	 
+	 
+<p style="color: red;">Aktuell keine produktive Nutzung möglich!</p>
+	 
 ##      EINFÜHRUNG
   Mit dem SWK-N Challangeboard möchten unseren Azubis die Möglichkit geben sich vor allem
   bei Kleinigkeiten besser zu organisieren.
