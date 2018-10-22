@@ -34,7 +34,7 @@
 	 
 	 
 	 
-<p style="color: red;">Aktuell keine produktive Nutzung möglich!</p>
+***Aktuell keine produktive Nutzung möglich!***
 	 
 ##      EINFÜHRUNG
   Mit dem SWK-N Challangeboard möchten unseren Azubis die Möglichkit geben sich vor allem
