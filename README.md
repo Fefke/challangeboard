@@ -24,7 +24,9 @@
 	 
 	ToDo:
 	 - Bug fixes (sowieso immer)
+	 - Passwort Änderung nach aktivierung mit Token
 	 - Mobile Design finalisieren
+	 - Datenschutz -transparenz- Password-Hashing Erklärung
 	 - Admin Bereich serverseitig mit .htaccess / .htpasswd absichern
 	 - SuperAdmin || Admins zu Mod's einfügen (ein Admin dem die Rechte nicht genommen werden können)
 	 - management der Backup-Tabelle fertigstellen
